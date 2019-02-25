@@ -1,0 +1,10 @@
+<article>
+    <mat-icon *ngIf="icon" class="background-secondary-color">{{icon}}</mat-icon>
+
+    <section class="font-body-2"><ng-content></ng-content></section>
+
+    <aside>
+        <button mat-button color="primary" *ngIf="dismissText" (click)="dismiss.emit()">{{ dismissText }}</button>
+        <button mat-button color="primary" *ngIf="confirmText" (click)="confirm.emit()">{{ confirmText }}</button>
+    </aside>
+</article>

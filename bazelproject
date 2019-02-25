@@ -1,0 +1,18 @@
+directories:
+  .
+  -node_modules
+  -dist
+
+targets:
+  //...
+
+java_language_level: 9
+
+workspace_type: java
+
+additional_languages:
+  javascript
+  typescript
+
+ts_config_rules:
+  //:tsconfig.json

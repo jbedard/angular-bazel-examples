@@ -1,0 +1,27 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+article {
+    display: flex;
+    overflow: hidden;
+
+    margin: 0 auto;
+}
+
+mat-icon {
+    align-self: center;
+}
+
+section {
+    flex: 1;
+    align-self: center;
+
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+aside {
+    align-self: flex-end;
+}

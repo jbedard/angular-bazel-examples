@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "lib": ["dom", "es2015", "es2016.array.include"],
+    // Override the default use of node_modules/@types and specify dependencies via bazel
+    "types": [],
+    "strict": true,
+    "noUnusedLocals": true,
+    "stripInternal": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "dist"],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableResourceInlining": true
+  }
+}
