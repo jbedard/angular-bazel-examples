@@ -7,6 +7,7 @@ load("@angular//packages/bazel:index.bzl", "ng_module", "ng_package")
 
 UI_COMPONENTS = [
     "banner",
+    "injected",
 ]
 
 UI_COMPONENT_PACKAGES = ["//ui/%s" % p for p in UI_COMPONENTS]
@@ -27,5 +28,8 @@ ng_package(
    globals = {
        '@angular/material/button': 'ng.material.button',
        '@angular/material/icon': 'ng.material.icon',
+
+       '@angular/cdk/overlay': 'ng.cdk.overlay',
+       '@angular/cdk/scrolling': 'ng.cdk.scrolling',    #<-- indirect dep of @angular/cdk/overlay, containing ngfactory which is missing
    }
 )
