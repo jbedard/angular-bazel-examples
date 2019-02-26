@@ -24,4 +24,8 @@ ng_package(
    srcs = ["package.json"],
    entry_point = "ui/index.js",
    deps = [":ui"] + UI_COMPONENT_PACKAGES,
+   globals = {
+       '@angular/material/button': 'ng.material.button',
+       '@angular/material/icon': 'ng.material.icon',
+   }
 )
