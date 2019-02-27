@@ -3,7 +3,7 @@ package(default_visibility = ["//visibility:public"])
 # Packaging modeled after @angular/cdk+material style
 # https://github.com/angular/material2/blob/7.3.3/src/cdk/BUILD.bazel
 
-load("@angular//packages/bazel:index.bzl", "ng_module", "ng_package")
+load("@npm_angular_bazel//:index.bzl", "ng_module", "ng_package")
 
 UI_COMPONENTS = [
     "banner",
