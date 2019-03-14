@@ -15,5 +15,6 @@ ng_module(
         "@npm//@angular/common",
         "@npm//@angular/core",
         "@npm//@angular/material",
+        "@npm//@angular/platform-browser",
     ],
 )

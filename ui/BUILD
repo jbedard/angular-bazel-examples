@@ -8,6 +8,7 @@ load("@npm_angular_bazel//:index.bzl", "ng_module", "ng_package")
 UI_COMPONENTS = [
     "banner",
     "injected",
+    "simple-injected",
 ]
 
 UI_COMPONENT_PACKAGES = ["//ui/%s" % p for p in UI_COMPONENTS]
@@ -16,20 +17,28 @@ ng_module(
     name = "ui",
     srcs = glob(["*.ts"]),
     module_name = "@npmscope/ui",
-    deps = ["@npm//@types", "@npm//@angular/core"] + UI_COMPONENT_PACKAGES,
+    deps = [
+        "@npm//@types",
+        "@npm//@angular/common",
+        "@npm//@angular/core",
+        "@npm//@angular/material",
+        "@npm//@angular/platform-browser",
+    ] + UI_COMPONENT_PACKAGES,
 )
 
 # BROKEN!!
 ng_package(
-   name = "npm",
-   srcs = ["package.json"],
-   entry_point = "ui/index.js",
-   deps = [":ui"] + UI_COMPONENT_PACKAGES,
-   globals = {
-       '@angular/material/button': 'ng.material.button',
-       '@angular/material/icon': 'ng.material.icon',
+    name = "npm",
+    srcs = ["//:package.json"],
+    entry_point = "ui/index.js",
+    deps = [
+        ":ui",
+    ] + UI_COMPONENT_PACKAGES,
+    globals = {
+        '@angular/material/button': 'ng.material.button',
+        '@angular/material/icon': 'ng.material.icon',
 
-       '@angular/cdk/overlay': 'ng.cdk.overlay',
-       '@angular/cdk/scrolling': 'ng.cdk.scrolling',    #<-- indirect dep of @angular/cdk/overlay, containing ngfactory which is missing
-   }
+        '@angular/cdk/overlay': 'ng.cdk.overlay',
+        '@angular/cdk/scrolling': 'ng.cdk.scrolling',    #<-- indirect dep of @angular/cdk/overlay, containing ngfactory which is missing
+    }
 )

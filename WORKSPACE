@@ -5,8 +5,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # Fetch rules_nodejs so we can install our npm dependencies
 http_archive(
     name = "build_bazel_rules_nodejs",
-    sha256 = "a69c5bd317beef982298ea7b5ed8b5c5275d1b55ee199e98a0ca088f8e0c6cce",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.18.7/rules_nodejs-0.18.7.tar.gz"],
+    sha256 = "5c86b055c57e15bf32d9009a15bcd6d8e190c41b1ff2fb18037b75e0012e4e7c",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.26.0/rules_nodejs-0.26.0.tar.gz"],
 )
 
 http_archive(
@@ -83,11 +83,3 @@ ts_setup_workspace()
 load("@io_bazel_rules_sass//:defs.bzl", "sass_repositories")
 
 sass_repositories()
-
-# Setup the angular toolchain. This integration test no longer builds Angular from source,
-# but we still need to set up the "angular" workspace since some Bazel rules depend on
-# the "ngdeps" repository. This can be fixed if we switched the Angular repository to the
-# "npm" repository for the bazel managed dependencies.
-load("@npm_angular_bazel//:index.bzl", "ng_setup_workspace")
-
-ng_setup_workspace()
