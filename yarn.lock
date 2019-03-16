@@ -147,10 +147,10 @@
     semver "5.6.0"
     tmp "0.0.33"
 
-"@bazel/typescript@^0.25.1":
-  version "0.25.1"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.25.1.tgz#71564de50ff6976fb37d90f2f7a479e87b158943"
-  integrity sha512-QFitUUXIWQMfVk5EwI9J9d5iNPfT+kUjPbahiJbJVZz1Fz9zNZ8+CR6FESfnxuUKlZK3Oy0VWFcz7mlHaceL/Q==
+"@bazel/typescript@^0.26.0":
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.26.0.tgz#c06139d76c8b9d3a3ed98a721b776fedb4b11c82"
+  integrity sha512-dh/Y/SZzmeChsLap8FVHYl0FuaeLh/6t9WBVhm5nOgyVrqfEyVpNzy4W20E4NqnmJY2/PqmD5qncf+Oo1q9h1A==
   dependencies:
     jasmine-core "2.8.0"
     protobufjs "5.0.3"
@@ -158,12 +158,11 @@
     source-map-support "0.5.9"
     tsutils "2.27.2"
 
-"@bazel/typescript@^0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.26.0.tgz#c06139d76c8b9d3a3ed98a721b776fedb4b11c82"
-  integrity sha512-dh/Y/SZzmeChsLap8FVHYl0FuaeLh/6t9WBVhm5nOgyVrqfEyVpNzy4W20E4NqnmJY2/PqmD5qncf+Oo1q9h1A==
+"@bazel/typescript@^0.27.4":
+  version "0.27.5"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.27.5.tgz#0fbdd0fb569dfa255807d23718e6e432b4e9f477"
+  integrity sha512-7hN3+1+YKF1HfdV2KgmYylhbs0jT/wkE2yVLGU5r/+lSjCzD6hBDqMlXV6Z7N3kzRQKZFg5pj0JQi/Lwqlq48Q==
   dependencies:
-    jasmine-core "2.8.0"
     protobufjs "5.0.3"
     semver "5.6.0"
     source-map-support "0.5.9"
@@ -666,7 +665,7 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-core-js@^2.2.0:
+core-js@^2.2.0, core-js@^2.6.5:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
   integrity sha512-klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==

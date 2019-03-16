@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>App</title>
+        <base href="/" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <script>
+            // Copy of https://github.com/alexeagle/angular-bazel-example/blob/master/src/module-id.js
+
+            // Work-around for angular material issue with ts_devserver and ts_web_test_suite.
+            // Material requires `module.id` to be valid. This symbol is valid in the production
+            // bundle but not in ts_devserver and ts_web_test_suite.
+            // See https://github.com/angular/material2/issues/13883.
+            // TODO(gmagolan): remove this work-around once #13883 is resolved.
+            window.module = {id: ''};
+        </script>
+    </head>
+    <body>
+        <ng-pkging-root></ng-pkging-root>
+    </body>
+</html>
