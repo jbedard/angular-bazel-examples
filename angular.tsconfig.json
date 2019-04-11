@@ -1,0 +1,34 @@
+// WORKAROUND https://github.com/angular/angular/issues/18810
+//
+// This file is required to run ngc on 3rd party libraries such as @ngrx,
+// to write files like node_modules/@ngrx/store/store.ngsummary.json.
+//
+// See:
+//  https://github.com/angular/angular/blob/master/integration/bazel/angular-metadata.tsconfig.json
+//  https://github.com/angular/angular/issues/29454
+//  https://github.com/angular/angular/issues/29491
+{
+  "compilerOptions": {
+    "lib": ["dom", "es2015"],
+    "experimentalDecorators": true,
+    "types": [],
+    "module": "amd",
+    "moduleResolution": "node"
+  },
+  "angularCompilerOptions": {
+    "enableSummariesForJit": true
+  },
+  "include": ["node_modules/@angular/**/*", "node_modules/@ngrx/**/*"],
+  "exclude": [
+    "node_modules/@angular/bazel/**",
+    "node_modules/@angular/cli/**",
+    "node_modules/@angular/compiler-cli/**",
+    "node_modules/@angular/router/upgrade*",
+    "node_modules/@angular/**/schematics/**",
+    "node_modules/@angular/**/testing/**",
+    "node_modules/@ngrx/*/migrations/**",
+    "node_modules/@ngrx/schematics/**",
+    "node_modules/@ngrx/*/schematics/**",
+    "node_modules/@ngrx/*/schematics-core/**"
+  ]
+}

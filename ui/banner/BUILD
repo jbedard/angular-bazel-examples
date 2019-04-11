@@ -1,6 +1,6 @@
 package(default_visibility = ["//visibility:public"])
 
-load("@angular//packages/bazel:index.bzl", "ng_module")
+load("@npm_angular_bazel//:index.bzl", "ng_module")
 
 ng_module(
     name = "banner",
@@ -12,9 +12,9 @@ ng_module(
     module_name = "@npmscope/ui/banner",
     deps = [
         "@npm//@types",
-        "@angular//packages/common",
-        "@angular//packages/core",
-        "@angular_material//src/lib/button",
-        "@angular_material//src/lib/icon",
+        "@npm//tslib",
+        "@npm//@angular/common",
+        "@npm//@angular/core",
+        "@npm//@angular/material",
     ],
 )

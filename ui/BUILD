@@ -3,7 +3,7 @@ package(default_visibility = ["//visibility:public"])
 # Packaging modeled after @angular/cdk+material style
 # https://github.com/angular/material2/blob/7.3.3/src/cdk/BUILD.bazel
 
-load("@angular//packages/bazel:index.bzl", "ng_module", "ng_package")
+load("@npm_angular_bazel//:index.bzl", "ng_module", "ng_package")
 
 UI_COMPONENTS = [
     "banner",
@@ -16,7 +16,14 @@ ng_module(
     name = "ui",
     srcs = glob(["*.ts"]),
     module_name = "@npmscope/ui",
-    deps = ["@npm//@types", "@npm//@angular/core"] + UI_COMPONENT_PACKAGES,
+    deps = UI_COMPONENT_PACKAGES + [
+        "@npm//@types",
+        "@npm//@angular/cdk",
+        "@npm//@angular/common",
+        "@npm//@angular/core",
+        "@npm//@angular/material",
+        "@npm//tslib",
+    ],
 )
 
 # BROKEN!!
@@ -24,7 +31,9 @@ ng_package(
    name = "npm",
    srcs = ["package.json"],
    entry_point = "ui/index.js",
-   deps = [":ui"] + UI_COMPONENT_PACKAGES,
+   deps = [":ui"] + UI_COMPONENT_PACKAGES + [
+        "@npm//tslib",
+    ],
    globals = {
        '@angular/material/button': 'ng.material.button',
        '@angular/material/icon': 'ng.material.icon',
