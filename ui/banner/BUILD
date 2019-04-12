@@ -7,7 +7,7 @@ ng_module(
     name = "banner",
     srcs = glob(["*.ts"]),
     assets = [
-        ":banner.html",
+        # ":banner.html",
         ":banner-sass",
     ],
     module_name = "@npmscope/ui/banner",
