@@ -2,10 +2,12 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppComponent } from "./app.component";
+import { BannerModule } from "../ui/banner";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    BannerModule,
     BrowserModule
   ],
 

@@ -8,7 +8,9 @@ ng_module(
     srcs = glob(["*.ts"]),
     deps = [
         "@npm//@angular/core",
+        "@npm//@angular/material",
         "@npm//@angular/platform-browser",
+        "//ui/banner",
     ],
     assets = [":app-sassy"],
 )
