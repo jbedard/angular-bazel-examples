@@ -17,7 +17,6 @@ ng_module(
     srcs = glob(["*.ts"]),
     module_name = "@npmscope/ui",
     deps = UI_COMPONENT_PACKAGES + [
-        "@npm//@types",
         "@npm//@angular/cdk",
         "@npm//@angular/common",
         "@npm//@angular/core",
