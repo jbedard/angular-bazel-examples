@@ -14,6 +14,8 @@
     "@angular/forms": "^9.0.0-rc.3",
     "@angular/material": "^9.0.0-rc.4",
     "@angular/platform-browser": "^9.0.0-rc.3",
+    "@ngrx/store": "^8.5.2",
+    "@ngrx/store-devtools": "^8.5.2",
     "rxjs": "^6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "^0.10.2"

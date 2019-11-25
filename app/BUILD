@@ -10,6 +10,8 @@ ng_module(
         "@npm//@angular/core",
         "@npm//@angular/material",
         "@npm//@angular/platform-browser",
+        "@npm//@ngrx/store",
+        "@npm//@ngrx/store-devtools",
         "//ui/banner",
     ],
     assets = [":app-sassy"],

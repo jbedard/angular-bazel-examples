@@ -1,6 +1,9 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
+import { StoreModule } from "@ngrx/store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+
 import { AppComponent } from "./app.component";
 import { BannerModule } from "@npmscope/ui/banner";
 
@@ -8,7 +11,9 @@ import { BannerModule } from "@npmscope/ui/banner";
   declarations: [AppComponent],
   imports: [
     BannerModule,
-    BrowserModule
+    BrowserModule,
+    StoreModule,
+    StoreDevtoolsModule
   ],
 
   bootstrap: [AppComponent],
