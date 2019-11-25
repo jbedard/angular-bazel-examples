@@ -9,7 +9,7 @@ yarn-error.log
 bazel-out
 bazel-bin
 bazel-genfiles
-bazel-ng_package-material
+bazel-angular-bazel-examples
 bazel-testlogs
 
 dist/
